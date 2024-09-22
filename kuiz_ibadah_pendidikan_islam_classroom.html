@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuiz Ibadah Pendidikan Islam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://example.com/classroom-background.jpg'); /* Placeholder for classroom theme */
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question p {
+            font-size: 18px;
+        }
+        .options button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        .options button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kuiz Ibadah Pendidikan Islam</h1>
+
+        <div class="question" id="question1">
+            <p>1. Apakah rukun Islam yang kedua?</p>
+            <div class="options">
+                <button onclick="checkAnswer(1, 'Salah')">Zakat</button>
+                <button onclick="checkAnswer(1, 'Betul')">Solat</button>
+                <button onclick="checkAnswer(1, 'Salah')">Puasa</button>
+            </div>
+            <p class="result" id="result1"></p>
+        </div>
+
+        <div class="question" id="question2">
+            <p>2. Berapa kali solat fardu wajib ditunaikan dalam sehari?</p>
+            <div class="options">
+                <button onclick="checkAnswer(2, 'Salah')">3 kali</button>
+                <button onclick="checkAnswer(2, 'Betul')">5 kali</button>
+                <button onclick="checkAnswer(2, 'Salah')">7 kali</button>
+            </div>
+            <p class="result" id="result2"></p>
+        </div>
+
+        <div class="question" id="question3">
+            <p>3. Pada bulan apakah umat Islam diwajibkan berpuasa?</p>
+            <div class="options">
+                <button onclick="checkAnswer(3, 'Salah')">Rejab</button>
+                <button onclick="checkAnswer(3, 'Betul')">Ramadan</button>
+                <button onclick="checkAnswer(3, 'Salah')">Syawal</button>
+            </div>
+            <p class="result" id="result3"></p>
+        </div>
+
+    </div>
+
+    <script>
+        function checkAnswer(questionNumber, answer) {
+            var resultElement = document.getElementById("result" + questionNumber);
+            resultElement.innerText = answer;
+            resultElement.style.color = answer === 'Betul' ? 'green' : 'red';
+        }
+    </script>
+
+</body>
+</html>
